@@ -5,180 +5,374 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Level Up</title>
     <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="style/fonts.css" />
     <link rel="stylesheet" href="style/slick.css" />
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <!-- section header -->
+    <div class="container">
+      <!-- section promo -->
 
-    <header class="header">
-      <div class="header__top">
-        <div class="container">
-          <div class="header__contacts">
-            <a class="header__phone" href="tel:380963092145"
-              >+38 (096) 309 21 45</a
-            >
-            <a class="header__email" href="#">layout585@gmail.com</a>
+      <section class="promo">
+        <div class="promo__bg__video">
+          <video class="bg__video" autoplay muted loop>
+            <source src="./assets/video/video.mp4" type="video/mp4" />
+            <source src="./assets/video/video.webm" type="video/webm" />
+            Тег video не поддерживается вашим браузером.
+            <a href="../assets/media/video.mp4">Скачайте видео</a>.
+          </video>
+        </div>
+        <div class="promo__title">
+          <h1 class="promo__title__text">Level Up</h1>
+        </div>
+
+        <div class="promo__content">
+          <div class="promo__content__left">
+            <img src="assets/images/prod.png" alt="product" />
+          </div>
+
+          <div class="promo__content__right">
+            <div class="promo__content__right__description">
+              <ul>
+                <li>
+                  Мягкие капсулы с жидкостью – питательные вещества,
+                  содержащиеся в удобных для употребления мягких капсулах,
+                  быстро усваиваются организмом. При использовании других форм
+                  могут использоваться связывающие вещества и наполнители,
+                  которые могут вызвать расстройство желудка и не имеют
+                  питательной ценности. Мягкие капсулы с жидкостью — оптимальная
+                  система доставки действующих веществ.
+                </li>
+                <li>
+                  Гарантия качества – Irwin Naturals делает все возможное для
+                  поддержания высочайшего качества продуктов для вашего
+                  здоровья. Мы проверяем продукцию на соответствие требованиям,
+                  чтобы обеспечить ее чистоту и качество.
+                </li>
+                <li>
+                  Запатентованный биоперин – биоперин повышает биодоступность,
+                  усвояемость и эффективность многих питательных веществ.
+                </li>
+              </ul>
+            </div>
+            <div class="promo__content__right__button">
+              <a href="#form" class="button">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section includes -->
+
+      <section class="includes">
+        <div data-tilt class="includes__item includes__1">
+          <div class="includes__imgBox">
+            <img
+              src="assets/images/includes/bread_of_ioann.jpg"
+              alt="bread-of-ioann"
+            />
+          </div>
+          <div class="includes__contentBox">
+            <p class="includes__title">хлеб св. Иоанна</p>
+          </div>
+          <div class="includes__description includes__description1">
             <a
-              data-fancybox
-              data-src="#modal"
-              href="javascript:;"
-              class="header__btn"
-              >Бесплатная консультация</a
+              target="_blank"
+              href="https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B6%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE"
             >
+              <p>
+                Плоды используются в медицине (входит в состав различных
+                лекарственных препаратов, преимущественно используемых для
+                укрепления иммунной системы и при желудочно-кишечных
+                расстройствах).
+              </p>
+            </a>
           </div>
         </div>
-      </div>
-      <div class="header__content">
-        <div class="container">
-          <div class="header__content-inner">
-            <div class="header__logo">
-              <a href="#"><img src="img/logo.png" alt="logo" /></a>
-            </div>
-            <nav class="menu">
-              <div class="header__btn-menu">
-                <span class="icon-bars"></span>
+        <div data-tilt class="includes__item includes__2">
+          <div class="includes__imgBox">
+            <img src="assets/images/includes/gelatin.jpg" alt="gelatin" />
+          </div>
+          <div class="includes__contentBox">
+            <p class="includes__title">Желатин</p>
+          </div>
+          <div class="includes__description includes__description2">
+            <a
+              target="_blank"
+              href="https://ru.wikipedia.org/wiki/%D0%96%D0%B5%D0%BB%D0%B0%D1%82%D0%B8%D0%BD"
+            >
+              <p>
+                Желатин применяют в производстве фармацевтических лекарственных
+                форм в виде капсул.
+              </p>
+            </a>
+          </div>
+        </div>
+        <div data-tilt class="includes__item includes__3">
+          <div class="includes__imgBox">
+            <img src="assets/images/includes/glitserin.jpg" alt="glitserin" />
+          </div>
+          <div class="includes__contentBox">
+            <p class="includes__title">глицерин</p>
+          </div>
+          <div class="includes__description includes__description3">
+            <a
+              target="_blank"
+              href="https://ru.wikipedia.org/wiki/%D0%93%D0%BB%D0%B8%D1%86%D0%B5%D1%80%D0%B8%D0%BD"
+            >
+              <p>
+                Глицерин относится к группе стабилизаторов, обладающих
+                свойствами сохранять и увеличивать степень вязкости и
+                консистенции пищевых продуктов. Зарегистрирован как пищевая
+                добавка Е422, и используется в качестве эмульгатора, при помощи
+                которого смешиваются различные несмешиваемые смеси.
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="includes__center">
+          <div class="includes__center__img">
+            <img src="assets/images/prod.png" alt="product" />
+          </div>
+        </div>
+        <div data-tilt class="includes__item includes__4">
+          <div class="includes__imgBox">
+            <img src="assets/images/includes/bee.jpg" alt="bee" />
+          </div>
+          <div class="includes__contentBox">
+            <p class="includes__title">пчелиный воск</p>
+          </div>
+          <div class="includes__description includes__description4">
+            <a
+              target="_blank"
+              href="https://ru.wikipedia.org/wiki/%D0%9F%D1%87%D0%B5%D0%BB%D0%B8%D0%BD%D1%8B%D0%B9_%D0%B2%D0%BE%D1%81%D0%BA"
+            >
+              <p>
+                Применяется в натуральной косметике — один из основных
+                (загущающих) компонентов биоинертной масляно-жировой основы
+                кремов и мазей, основной компонент помад, твёрдых духов и в
+                качестве биодобавки.
+              </p>
+            </a>
+          </div>
+        </div>
+        <div data-tilt class="includes__item includes__5">
+          <div class="includes__imgBox">
+            <img
+              src="assets/images/includes/soevyj_lecitin.jpg"
+              alt="lecitin"
+            />
+          </div>
+          <div class="includes__contentBox">
+            <p class="includes__title">соевый лецитин</p>
+          </div>
+          <div class="includes__description includes__description5">
+            <a
+              target="_blank"
+              href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D1%86%D0%B8%D1%82%D0%B8%D0%BD%D1%8B"
+            >
+              <p>
+                Лецитин является действующим веществом так называемых
+                гепатопротекторов, призванных предупреждать заболевания печени.
+                На основе фосфолипидов производятся препараты «Эссенциале
+                Форте», «Эссенциале Н», «Эсливер Форте» и других.
+              </p>
+            </a>
+          </div>
+        </div>
+        <div data-tilt class="includes__item includes__6">
+          <div class="includes__imgBox">
+            <img src="assets/images/includes/annato.jpg" alt="annato" />
+          </div>
+          <div class="includes__contentBox">
+            <p class="includes__title">аннато</p>
+          </div>
+          <div class="includes__description includes__description6">
+            <a
+              target="_blank"
+              href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%BD%D0%B0%D1%82%D0%BE"
+            >
+              <p>
+                Различные части растения используются при лечении последствий
+                солнечного удара, ожогов и головных болей.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- section testimonial -->
+
+      <section class="testimonial">
+        <div class="slider">
+          <div class="slider__inner">
+            <div class="slider__item">
+              <div class="slider__img">
+                <img
+                  src="./assets/images/testimonials/testimonial_1.jpg"
+                  alt="autor1"
+                />
               </div>
-              <nav>
-                <ul>
-                  <li><a href="#top">Главная</a></li>
-                  <li><a href="#about">О компании</a></li>
-                  <li><a href="#services">Услуги</a></li>
-                  <li><a href="#contacts">Контакты</a></li>
-                </ul>
-              </nav>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- section slider -->
-
-    <section class="slider">
-      <div class="container">
-        <div class="slider__inner">
-          <div class="slider__item-content">
-            <div class="slider__item">
-              <h2 class="slider__title">КОМПЛЕКСНОЕ ЗАКРЫТИЕ ПРЕДПРИЯТИЯ</h2>
-              <p class="slider__text">
-                Полное прекращение существования юридического лица с сохранением
-                легальности всей предыдущей деятельности. Полное прекращение
-                существования юридического лица с сохранением легальности всей
-                предыдущей деятельности.
+              <p class="slider__testimonial">
+                Очень хороший препарат. Теперь могу забивать гвозди без молотка.
+                Всем советую.
               </p>
-              <a
-                data-fancybox
-                data-src="#modal"
-                href="javascript:;"
-                class="slider__btn default-btn"
-                >Оставить заявку</a
-              >
+              <span class="slider__autor">Jerome234</span>
             </div>
-          </div>
-          <div class="slider__item-content">
             <div class="slider__item">
-              <h2 class="slider__title">КОМПЛЕКСНОЕ ЗАКРЫТИЕ ПРЕДПРИЯТИЯ</h2>
-              <p class="slider__text">
-                Полное прекращение существования юридического лица с сохранением
-                легальности всей предыдущей деятельности.
-                <details></details>
+              <div class="slider__img">
+                <img
+                  src="./assets/images/testimonials/testimonial_2.jpg"
+                  alt="autor2"
+                />
+              </div>
+              <p class="slider__testimonial">
+                Совсем неожиданный эффект. Но так тоже не плохо.
               </p>
-              <a
-                data-fancybox
-                data-src="#modal"
-                href="javascript:;"
-                class="slider__btn default-btn"
-                >Оставить заявку</a
-              >
+              <span class="slider__autor">Валерий Степанович</span>
             </div>
-          </div>
-          <div class="slider__item-content">
             <div class="slider__item">
-              <h2 class="slider__title">КОМПЛЕКСНОЕ ЗАКРЫТИЕ ПРЕДПРИЯТИЯ</h2>
-              <p class="slider__text">
-                Полное прекращение существования юридического лица с сохранением
-                легальности всей предыдущей деятельности.
-                <details></details>
+              <div class="slider__img">
+                <img
+                  src="./assets/images/testimonials/testimonial_3.jpg"
+                  alt="autor3"
+                />
+              </div>
+              <p class="slider__testimonial">
+                Теперь мои часы всегда показывают полдень.
               </p>
-              <a
-                data-fancybox
-                data-src="#modal"
-                href="javascript:;"
-                class="slider__btn default-btn"
-                >Оставить заявку</a
-              >
+              <span class="slider__autor">John Dow</span>
+            </div>
+            <div class="slider__item">
+              <div class="slider__img">
+                <img
+                  src="./assets/images/testimonials/testimonial_4.jpg"
+                  alt="autor4"
+                />
+              </div>
+              <p class="slider__testimonial">
+                Не помогло. Куда я только не втирал этот препарат.
+              </p>
+              <span class="slider__autor">Игнат Пелепенко</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- section form -->
+      <!-- section promo2 -->
 
-    <section class="form">
-      <a name="form"></a>
-      <div class="container">
-        <div class="form__inner">
-          <div class="form__content">
-            <div class="form__title-box">
-              <h2 class="form__title">Получить Консультацию</h2>
-              <p class="form__text">
-                Комплексный подход к вашему вопросу, своевременная правовую
-                помощь, представление интересов во всех судебных инстанциях.
-              </p>
-            </div>
-            <div class="form__box">
-              <form>
-                <div class="form__box-inner">
-                  <div class="form__box-left">
-                    <label>
-                      E-mail
-                      <input type="text" name="E-mail" />
-                    </label>
-                    <label>
-                      Контактный телефон
-                      <input type="text" name="tel" />
-                    </label>
-                    <label>
-                      ФИО
-                      <input type="text" name="name" />
-                    </label>
-                    <label>
-                      Тема вопроса
-                      <select>
-                        <option>1.--------------</option>
-                        <option>2.--------------</option>
-                        <option>3.--------------</option>
-                        <option>4.--------------</option>
-                      </select>
-                    </label>
-                  </div>
-                  <div class="form__box-right">
-                    <label>
-                      Сообщение
-                      <textarea></textarea>
-                    </label>
-                    <button class="default-btn" type="submit">
-                      Получить консультацию
-                    </button>
-                  </div>
-                </div>
-              </form>
+      <section class="promo2">
+        <div class="promo2__content__top">
+          <div class="promo2__content__left">
+            <img src="assets/images/doctor2.png" alt="docter" />
+          </div>
+
+          <div class="promo2__content__right">
+            <p>
+              Steel-Libido Peak Testosterone с биоперином — это мощная формула
+              2-в-1 для поддержки сексуальной функции и повышения уровня
+              тестостерона у мужчин любого возраста. Эта формула для мужчин
+              объединяет традиционные растения и специально подобранные
+              питательные вещества для повышения физической готовности и
+              стимула. Эта уникальная формула также содержит KSM-66 —
+              высококонцентрированный экстракт ашваганды.
+            </p>
+            <p>
+              Предварительные исследования позволяют предположить, что он может
+              помочь повысить уровень тестостерона, изначально находящийся на
+              нормальном уровне. Исследования также продемонстрировали
+              разнообразные полезные свойства этой концентрированной формы
+              ашваганды — от улучшения общего самочувствия и защиты от стресса
+              до укрепления выносливости.
+            </p>
+            <p>
+              Принимайте этот продукт ежедневно для поддержания активной
+              сексуальной жизни или периодически для максимизации потенции.
+            </p>
+          </div>
+        </div>
+        <div class="promo2__content__bottom">
+          <ul>
+            <li>Экстракт трибула</li>
+            <li>Порошок мака</li>
+            <li>Экстракт пажитника</li>
+            <li>Бета-ситостеролы 40%</li>
+          </ul>
+          <a href="#form" class="button promo2__button">Заказать</a>
+        </div>
+      </section>
+
+      <!-- section form -->
+
+      <section class="form">
+        <div class="form__title">
+          <h1 class="form__title__text">Level Up</h1>
+        </div>
+        <div class="form__timer__wrapper">
+          <h1 id="form__timer__text">До конца акции осталось:</h1>
+          <div class="form__timer">
+            <div class="form__timer__container">
+              <div class="form__timer__container__for__phone">
+                <h2 id="timer__days">00</h2>
+                <h2 class="timer__dots">дней</h2>
+              </div>
+              <div class="form__timer__container__for__pc">
+                <h2 id="timer__days2">00</h2>
+                <h2 class="timer__dots">дней</h2>
+                <h2 id="timer__hours">00</h2>
+                <h2 class="timer__dots">:</h2>
+                <h2 id="timer__minutes">00</h2>
+                <h2 class="timer__dots">:</h2>
+                <h2 id="timer__seconds">00</h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="form__content">
+          <div class="form__content__LR form__content__left">
+            <div class="form__image">
+              <img src="assets/images/prod.png" alt="product" />
+            </div>
+            <div class="form__new__price">20 000 руб</div>
+            <div class="form__old__price">2 000 000 руб</div>
+          </div>
+          <div class="form__content__LR form__content__right">
+            <a name="form"></a>
+            <form>
+              <label> Ваше имя </label>
+              <input
+                class="form__name"
+                type="text"
+                name="name"
+                placeholder="Введите ваше имя.."
+              />
+              <label> Контактный телефон </label>
+              <input
+                class="form__phone"
+                type="text"
+                name="phone"
+                placeholder="Введите номер телефона.."
+              />
+              <button class="default-btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <div id="btn__top">
       <a href="#" id="btn__top-content"></a>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".includes__item"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
