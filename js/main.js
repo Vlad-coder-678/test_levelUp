@@ -1,4 +1,9 @@
 window.onload = () => {
+  // preloader
+  document.getElementById("bg__video").addEventListener("canplaythrough",()=>{
+    console.log(document.getElementById("preloader").style.display = "none");
+  });
+
   // VanillaTilt 
   VanillaTilt.init(document.querySelectorAll(".includes__item"), {
     max: 25,

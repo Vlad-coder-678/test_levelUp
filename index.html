@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/fonts.css" />
     <link rel="stylesheet" href="style/slick.css" />
+    <link rel="stylesheet" href="style/preloader.css" />
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
@@ -15,7 +16,7 @@
 
       <section class="promo">
         <div class="promo__bg__video">
-          <video class="bg__video" autoplay muted loop>
+          <video class="bg__video" id="bg__video" autoplay muted loop>
             <source src="./assets/video/video.mp4" type="video/mp4" />
             <source src="./assets/video/video.webm" type="video/webm" />
             Тег video не поддерживается вашим браузером.
@@ -371,9 +372,61 @@
       <a href="#" id="btn__top-content"></a>
     </div>
 
+    <div class="preloader" id="preloader">
+      <div class="preloader__title">
+        <h1 class="preloader__title__text">Level Up</h1>
+      </div>
+      <svg class="preloader__svg1">
+        <filter id="fire">
+          <feTurbulence
+            id="turbulence"
+            baseFrequency="0.1 0.1"
+            numOctaves="2"
+            seed="3"
+          >
+            <animate
+              attributeName="baseFrequency"
+              dur="10s"
+              values="0.1 0.1; 0.12 0.12"
+              repeatCount="indefinite"
+            ></animate>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" scale="10"></feDisplacementMap>
+        </filter>
+      </svg>
+
+      <svg class="preloader__svg2">
+        <filter id="gooey">
+          <feGaussianBlur in="SpurceGraphik" stdDeviation="10" />
+          <feColorMatrix
+            values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -10"
+          />
+        </filter>
+      </svg>
+      <div class="preloader6__inner">
+        <span class="prel6__i1" style="--i: 0"></span>
+        <span class="prel6__i2" style="--i: 1"></span>
+        <span class="prel6__i3" style="--i: 2"></span>
+        <span class="prel6__i4" style="--i: 3"></span>
+        <span class="prel6__i5" style="--i: 4"></span>
+        <span class="prel6__i6" style="--i: 5"></span>
+        <span class="prel6__i7" style="--i: 6"></span>
+        <span class="prel6__i8" style="--i: 7"></span>
+        <span class="prel6__j0" style="--j: 0"></span>
+        <span class="prel6__j1" style="--j: 1"></span>
+        <span class="prel6__j2" style="--j: 2"></span>
+        <span class="prel6__j3" style="--j: 3"></span>
+        <span class="prel6__j4" style="--j: 4"></span>
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script src="js/vanilla-tilt.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
   </body>

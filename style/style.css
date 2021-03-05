@@ -89,6 +89,7 @@ body {
   align-items: center;
   background-color: #202020;
   border-radius: 10px;
+  filter: url(#fire);
 }
 
 .promo__title__text {
