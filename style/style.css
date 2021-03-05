@@ -31,7 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh;
+  height: auto;
   border-radius: 10px;
   overflow: hidden;
   z-index: 0;

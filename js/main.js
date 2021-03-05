@@ -1,7 +1,7 @@
 window.onload = () => {
   // preloader
   document.getElementById("bg__video").addEventListener("canplaythrough",()=>{
-    console.log(document.getElementById("preloader").style.display = "none");
+    document.getElementById("preloader").style.display = "none";
   });
 
   // VanillaTilt 
