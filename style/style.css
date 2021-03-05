@@ -743,9 +743,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.form__timer__container__for__phone {
-  display: none;
-}
+.form__timer__container__for__phone h2:nth-child(odd),
 .form__timer__container__for__pc h2:nth-child(odd) {
   width: 120px;
   height: 120px;
@@ -756,6 +754,9 @@ body {
   margin: 0 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.form__timer__container__for__phone {
+  display: none;
 }
 .form__timer__container__for__pc h2#timer__seconds {
   color: #f9d524;
@@ -881,6 +882,7 @@ body {
   .form__timer__container__for__pc h2 {
     font-size: 4em;
   }
+  .form__timer__container__for__phone h2:nth-child(odd),
   .form__timer__container__for__pc h2:nth-child(odd) {
     width: 100px;
     height: 100px;
@@ -902,7 +904,7 @@ body {
   .form__timer__container__for__pc h2 {
     font-size: 2em;
   }
-  .form__timer__container__for__phone,
+  .form__timer__container__for__phone h2:nth-child(odd),
   .form__timer__container__for__pc h2:nth-child(odd) {
     width: 70px;
     height: 70px;
@@ -950,6 +952,7 @@ body {
     height: 40px;
     margin: 0;
   }
+  .form__timer__container__for__phone h2:nth-child(odd),
   .form__timer__container__for__pc h2:nth-child(odd) {
     width: 50px;
     height: 50px;
