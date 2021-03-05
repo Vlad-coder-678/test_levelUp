@@ -1,104 +1,42 @@
-$(function () {
-
-  // slider
-  $(".slider__inner").slick({
-    prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
-    nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
+window.onload = () => {
+  // VanillaTilt 
+  VanillaTilt.init(document.querySelectorAll(".includes__item"), {
+    max: 25,
+    speed: 400,
   });
-// VanillaTilt 
-VanillaTilt.init(document.querySelectorAll(".includes__item"), {
-  max: 25,
-  speed: 400,
-});
+    
+  // обработчик ввода номера телефона
+  const inputPhoneEl = document.querySelector(".form__phone");
+  inputPhoneEl.oninput = (event) => {
+    let re = /\D+/gi;
+    let v = event.target.value;
+    v = v.replace(re, "");
+    v.length <= 0
+      ? (v = "")
+      : v.length === 1
+      ? (v = "+" + v)
+      : v.length === 2
+      ? (v = "+" + v[0] + "(" + v[1])
+      : v.length === 3
+      ? (v = "+" + v[0] + "(" + v[1] + v[2])
+      : v.length === 4
+      ? (v = "+" + v[0] + "(" + v[1] + v[2] + v[3])
+      : v.length === 5
+      ? (v = "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4])
+      : v.length === 6
+      ? (v = "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4] + v[5])
+      : v.length === 7
+      ? (v =
+        "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4] + v[5] + v[6]) : v.length === 8
+      ? (v = "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4] + v[5] + v[6] + "-" + v[7])
+      : v.length === 9
+      ? (v = "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4] + v[5] + v[6] + "-" + v[7] + v[8])
+      : v.length === 10
+      ? (v = "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4] + v[5] + v[6] + "-" + v[7] + v[8] + "-" + v[9])
+      : (v = "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4] + v[5] + v[6] + "-" + v[7] + v[8] + "-" + v[9] + v[10]);
+      event.target.value = v;
+  };
 
-// обработчик ввода номера телефона
-const inputPhoneEl = document.querySelector(".form__phone");
-inputPhoneEl.oninput = (event) => {
-  let re = /\D+/gi;
-  let v = event.target.value;
-  v = v.replace(re, "");
-  v.length <= 0
-    ? (v = "")
-    : v.length === 1
-    ? (v = "+" + v)
-    : v.length === 2
-    ? (v = "+" + v[0] + "(" + v[1])
-    : v.length === 3
-    ? (v = "+" + v[0] + "(" + v[1] + v[2])
-    : v.length === 4
-    ? (v = "+" + v[0] + "(" + v[1] + v[2] + v[3])
-    : v.length === 5
-    ? (v = "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4])
-    : v.length === 6
-    ? (v = "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4] + v[5])
-    : v.length === 7
-    ? (v =
-        "+" + v[0] + "(" + v[1] + v[2] + v[3] + ")" + v[4] + v[5] + v[6])
-    : v.length === 8
-    ? (v =
-        "+" +
-        v[0] +
-        "(" +
-        v[1] +
-        v[2] +
-        v[3] +
-        ")" +
-        v[4] +
-        v[5] +
-        v[6] +
-        "-" +
-        v[7])
-    : v.length === 9
-    ? (v =
-        "+" +
-        v[0] +
-        "(" +
-        v[1] +
-        v[2] +
-        v[3] +
-        ")" +
-        v[4] +
-        v[5] +
-        v[6] +
-        "-" +
-        v[7] +
-        v[8])
-    : v.length === 10
-    ? (v =
-        "+" +
-        v[0] +
-        "(" +
-        v[1] +
-        v[2] +
-        v[3] +
-        ")" +
-        v[4] +
-        v[5] +
-        v[6] +
-        "-" +
-        v[7] +
-        v[8] +
-        "-" +
-        v[9])
-    : (v =
-        "+" +
-        v[0] +
-        "(" +
-        v[1] +
-        v[2] +
-        v[3] +
-        ")" +
-        v[4] +
-        v[5] +
-        v[6] +
-        "-" +
-        v[7] +
-        v[8] +
-        "-" +
-        v[9] +
-        v[10]);
-  event.target.value = v;
-};
 
   // timer
 
@@ -107,14 +45,13 @@ inputPhoneEl.oninput = (event) => {
 
   //  или конкретное количество дней до окончания
   const countDays = 3;
-  const countDownDate =
-  new Date().getTime() + countDays * 1000 * 60 * 60 * 24;
-
+  let countDownDate;
   // Обновляем дату каждую секунду используя setInterval
   let clockInterval = setInterval(function () {
+    localStorage.getItem('countDownDate') != null ? countDownDate = localStorage.getItem('countDownDate') : (countDownDate = new Date().getTime() + countDays * 1000 * 60 * 60 * 24) && (localStorage.setItem('countDownDate', countDownDate));
     const now = new Date().getTime();
     const distance = countDownDate - now;
-
+    
     // Вычисляем days, daysInscription, hours, minutes and seconds
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
     let hours = Math.floor(
@@ -153,13 +90,14 @@ inputPhoneEl.oninput = (event) => {
 
     // Если счётчик на нуле выводим надпись на экран
     if (distance <= 0) {
-      daysEl.innerHTML = "0";
-      hoursEl.innerHTML = "0";
-      minutesEl.innerHTML = "00";
-      secondsEl.innerHTML = "00";
-      clearInterval(clockInterval);
-      document.getElementById("form__timer__text").innerHTML =
-        "Акция завершена";
+      localStorage.removeItem('countDownDate');
+      // daysEl.innerHTML = "0";
+      // hoursEl.innerHTML = "0";
+      // minutesEl.innerHTML = "00";
+      // secondsEl.innerHTML = "00";
+      // clearInterval(clockInterval);
+      // document.getElementById("form__timer__text").innerHTML =
+        // "Акция завершена";
       }
     }, 1000);
 
@@ -185,4 +123,5 @@ inputPhoneEl.oninput = (event) => {
     }
     return sEnding;
   }
-});
+};
+
