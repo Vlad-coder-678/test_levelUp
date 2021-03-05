@@ -349,10 +349,17 @@
               <label> Контактный телефон </label>
               <input
                 class="form__phone"
-                type="text"
+                type="tel"
                 name="phone"
+                maxlength="16"
+                list="defaultTels"
+                pattern="+[0-9]{1+}([0-9]{3})[0-9]{3}-[0-9]{2}-[0-9]{2}"
                 placeholder="Введите номер телефона.."
               />
+              <datalist id="defaultTels">
+                <option value="+7(978)000-00-00"></option>
+              </datalist>
+
               <button class="default-btn" type="submit">Заказать</button>
             </form>
           </div>
