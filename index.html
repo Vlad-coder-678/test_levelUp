@@ -368,10 +368,6 @@
       </section>
     </div>
 
-    <div id="btn__top">
-      <a href="#" id="btn__top-content"></a>
-    </div>
-
     <div class="preloader" id="preloader">
       <div class="preloader__title">
         <h1 class="preloader__title__text">Level Up</h1>
@@ -392,6 +388,24 @@
             ></animate>
           </feTurbulence>
           <feDisplacementMap in="SourceGraphic" scale="10"></feDisplacementMap>
+        </filter>
+      </svg>
+      <svg class="preloader__svg3">
+        <filter id="fire2">
+          <feTurbulence
+            id="turbulence"
+            baseFrequency="0.1 0.1"
+            numOctaves="2"
+            seed="3"
+          >
+            <animate
+              attributeName="baseFrequency"
+              dur="10s"
+              values="0.1 0.1; 0.12 0.12"
+              repeatCount="indefinite"
+            ></animate>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" scale="5"></feDisplacementMap>
         </filter>
       </svg>
 

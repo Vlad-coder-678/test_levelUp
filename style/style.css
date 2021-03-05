@@ -92,6 +92,7 @@ body {
   filter: url(#fire);
 }
 
+.form__new__price,
 .promo__title__text {
   font-family: sans-serif;
   font-size: 50px;
@@ -102,6 +103,9 @@ body {
   text-transform: uppercase;
   text-shadow: 0 0 10px #ff8c3b, 0 0 40px #ff8c3b, 0 0 80px #ff8c3b,
     0 0 160px #ff8c3b, 0 0 240px #ff8c3b;
+}
+.form__new__price {
+  filter: url(#fire2);
 }
 
 .promo__content {
