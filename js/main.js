@@ -6,21 +6,6 @@ $(function () {
     nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
   });
 
-  // button back to top
-
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 500) {
-      $("#btn__top").fadeIn();
-    } else {
-      $("#btn__top").fadeOut();
-    }
-  });
-
-  $("#btn__top").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 800);
-    return false;
-  });
-
   // timer
 
   // Set the date we're counting down to
