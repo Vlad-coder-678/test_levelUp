@@ -1,19 +1,17 @@
 $(function () {
-  // slider
 
+  // slider
   $(".slider__inner").slick({
     prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
   });
-});
-
+// VanillaTilt 
 VanillaTilt.init(document.querySelectorAll(".includes__item"), {
   max: 25,
   speed: 400,
 });
 
 // обработчик ввода номера телефона
-
 const inputPhoneEl = document.querySelector(".form__phone");
 inputPhoneEl.oninput = (event) => {
   let re = /\D+/gi;
@@ -102,87 +100,89 @@ inputPhoneEl.oninput = (event) => {
   event.target.value = v;
 };
 
-      // timer
+  // timer
 
-      // Задаём конкретную дату завершения акции
-      // let countDownDate = new Date("Apr 01, 2021 0:00:00").getTime();
+  // Задаём конкретную дату завершения акции
+  // let countDownDate = new Date("Apr 01, 2021 0:00:00").getTime();
 
-      //  или конкретное количество дней до окончания
-      const countDays = 3;
-      const countDownDate =
-        new Date().getTime() + countDays * 1000 * 60 * 60 * 24;
+  //  или конкретное количество дней до окончания
+  const countDays = 3;
+  const countDownDate =
+  new Date().getTime() + countDays * 1000 * 60 * 60 * 24;
 
-      // Обновляем дату каждую секунду используя setInterval
-      let clockInterval = setInterval(function () {
-        const now = new Date().getTime();
-        const distance = countDownDate - now;
+  // Обновляем дату каждую секунду используя setInterval
+  let clockInterval = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
 
-        // Вычисляем days, daysInscription, hours, minutes and seconds
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Вычисляем days, daysInscription, hours, minutes and seconds
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        days = days <= 0 ? "0" : days;
-        hours = hours < 10 ? "0" + hours : hours <= 0 ? "0" : hours;
-        minutes = minutes < 10 ? "0" + minutes : minutes <= 0 ? "0" : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds <= 0 ? "0" : seconds;
+    days = days <= 0 ? "0" : days;
+    hours = hours < 10 ? "0" + hours : hours <= 0 ? "0" : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes <= 0 ? "0" : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds <= 0 ? "0" : seconds;
 
-        // находим элементы на экране
-        const daysEl = document.getElementById("timer__days");
-        const daysEl2 = document.getElementById("timer__days2");
-        const daysInscriptionEl = document.getElementById(
-          "timer__days__inscription"
-        );
-        const daysInscriptionEl2 = document.getElementById(
-          "timer__days__inscription2"
-        );
-        const hoursEl = document.getElementById("timer__hours");
-        const minutesEl = document.getElementById("timer__minutes");
-        const secondsEl = document.getElementById("timer__seconds");
+    // находим элементы на экране
+    const daysEl = document.getElementById("timer__days");
+    const daysEl2 = document.getElementById("timer__days2");
+    const daysInscriptionEl = document.getElementById(
+      "timer__days__inscription"
+    );
+    const daysInscriptionEl2 = document.getElementById(
+      "timer__days__inscription2"
+    );
+    const hoursEl = document.getElementById("timer__hours");
+    const minutesEl = document.getElementById("timer__minutes");
+    const secondsEl = document.getElementById("timer__seconds");
 
-        // присваиваем элементам значения
-        daysEl.innerHTML = daysEl2.innerHTML = days;
-        daysInscriptionEl.innerHTML = daysInscriptionEl2.innerHTML = getNumEnding(
-          days,
-          ["день", "дня", "дней"]
-        );
-        hoursEl.innerHTML = hours;
-        minutesEl.innerHTML = minutes;
-        secondsEl.innerHTML = seconds;
-        // Если счётчик на нуле выводим надпись на экран
-        if (distance <= 0) {
-          daysEl.innerHTML = "0";
-          hoursEl.innerHTML = "0";
-          minutesEl.innerHTML = "00";
-          secondsEl.innerHTML = "00";
-          clearInterval(clockInterval);
-          document.getElementById("form__timer__text").innerHTML =
-            "Акция завершена";
-        }
-      }, 1000);
+    // присваиваем элементам значения
+    daysEl.innerHTML = daysEl2.innerHTML = days;
+    daysInscriptionEl.innerHTML = daysInscriptionEl2.innerHTML = getNumEnding(
+      days,
+      ["день", "дня", "дней"]
+    );
+    hoursEl.innerHTML = hours;
+    minutesEl.innerHTML = minutes;
+    secondsEl.innerHTML = seconds;
 
-      function getNumEnding(iNumber, aEndings) {
-        let sEnding, i;
-        iNumber = iNumber % 100;
-        if (iNumber >= 11 && iNumber <= 19) {
-          sEnding = aEndings[2];
-        } else {
-          i = iNumber % 10;
-          switch (i) {
-            case 1:
-              sEnding = aEndings[0];
-              break;
-            case 2:
-            case 3:
-            case 4:
-              sEnding = aEndings[1];
-              break;
-            default:
-              sEnding = aEndings[2];
-          }
-        }
-        return sEnding;
+    // Если счётчик на нуле выводим надпись на экран
+    if (distance <= 0) {
+      daysEl.innerHTML = "0";
+      hoursEl.innerHTML = "0";
+      minutesEl.innerHTML = "00";
+      secondsEl.innerHTML = "00";
+      clearInterval(clockInterval);
+      document.getElementById("form__timer__text").innerHTML =
+        "Акция завершена";
       }
+    }, 1000);
+
+    function getNumEnding(iNumber, aEndings) {
+      let sEnding, i;
+      iNumber = iNumber % 100;
+      if (iNumber >= 11 && iNumber <= 19) {
+        sEnding = aEndings[2];
+      } else {
+        i = iNumber % 10;
+        switch (i) {
+          case 1:
+            sEnding = aEndings[0];
+            break;
+          case 2:
+          case 3:
+          case 4:
+            sEnding = aEndings[1];
+            break;
+          default:
+            sEnding = aEndings[2];
+      }
+    }
+    return sEnding;
+  }
+});
